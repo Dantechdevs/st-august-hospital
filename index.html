@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. August Hospital | Where Compassion Meets Care</title>
+
+  <!-- SEO Meta Tags (Optional, invisible to design) -->
+  <meta name="description" content="St. August Hospital offers high-quality healthcare, emergency care, dental, pharmacy, inpatient & outpatient services in Syokimau, Kenya. Book your appointment online.">
+  <meta name="keywords" content="Hospital, Healthcare, Emergency, Dental, Pharmacy, Inpatient, Outpatient, Machakos, Kenya">
+  <meta name="author" content="St. August Hospital">
+
+  <!-- Bootstrap & Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* ================= TOP BAR ================= */
+    .top-bar {
+      background: linear-gradient(90deg, #0a2e5c, #0d6efd);
+      color: #fff;
+      font-size: 0.9rem;
+    }
+    .top-bar i {
+      color: #20c997;
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      background: #ffffff;
+      border-bottom: 3px solid #0d6efd;
+    }
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #0a2e5c !important;
+    }
+    .nav-link {
+      color: #0a2e5c !important;
+      font-weight: 600;
+      margin-left: 15px;
+    }
+    .nav-link:hover {
+      color: #198754 !important;
+    }
+    .nav-link.active {
+      color: #0d6efd !important;
+      border-bottom: 2px solid #0d6efd;
+    }
+
+    /* ================= HERO ================= */
+    .hero {
+      background: linear-gradient(
+        rgba(9, 106, 242, 0.85),
+        rgba(243, 7, 176, 0.85)
+      ), url("images/reception.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 140px 0;
+      text-align: center;
+    }
+    .hero h1 { font-size: 3.2rem; font-weight: 800; }
+
+    /* ================= SECTION TITLE ================= */
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #0a2e5c;
+    }
+
+    /* ================= SERVICES ================= */
+    .service-card {
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+
+    /* ================= CTA ================= */
+    .cta {
+      background: linear-gradient(90deg, #198754, #20c997);
+      color: #fff;
+      padding: 70px 0;
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      background: #0a2e5c;
+      color: #fff;
+    }
+
+    /* ================= MAP ================= */
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+    .map-responsive iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ================= FLOAT BUTTONS ================= */
+    .whatsapp-float, .call-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+    .whatsapp-float { bottom: 20px; right: 20px; background: #25d366; }
+    .call-float { bottom: 20px; left: 20px; background: #0d6efd; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.2rem; }
+      .nav-link { margin-left: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= TOP BAR ================= -->
+<div class="top-bar py-2">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+    <div>
+      <i class="fa-solid fa-phone"></i> +254 769 069 686 |
+      <i class="fa-solid fa-envelope"></i> info@staugusthospital.co.ke
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <span class="badge bg-danger"><i class="fa-solid fa-truck-medical"></i> Emergency</span>
+      <span class="d-none d-md-inline"><i class="fa-solid fa-shield-halved"></i> SHA Accepted</span>
+      <a href="#appointments" class="btn btn-sm btn-light fw-bold">Book Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">St. August Hospital</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#whychooseus">Why Choose Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#appointments">Appointments</a></li>
+        <li class="nav-item">
+          <a class="btn btn-success mt-2 mt-lg-0 ms-lg-3" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>St. August Hospital</h1>
+    <p class="lead">Where Compassion Meets Care</p>
+    <p>Emergency • Dental • Pharmacy • Inpatient & Outpatient</p>
+    <a href="#appointments" class="btn btn-light btn-lg mt-3">
+      <i class="fa-solid fa-calendar-check"></i> Book Appointment
+    </a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="py-5 bg-light" id="about">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" style="font-weight: 900; font-size: 2.8rem; color: #0d6efd; text-shadow: 1px 1px 3px rgba(0,0,0,0.2);">
+      About <span style="color: #20c997;">St. August Hospital</span>
+    </h2>
+    <div class="row align-items-center g-5 d-flex">
+      <!-- Text Left -->
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <p class="lead">
+          St. August Hospital is a modern healthcare facility located in Syokimau, Machakos County.
+          We provide <strong>affordable, high-quality, and compassionate healthcare</strong> supported by highly qualified professionals and state-of-the-art medical technology.
+        </p>
+        <ul class="list-unstyled mt-4">
+          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>24/7 Emergency Services</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Highly Qualified Doctors & Nurses</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Modern Inpatient & Outpatient Facilities</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Ample Parking & Accessibility</li>
+        </ul>
+        <a href="#appointments" class="btn btn-primary mt-3 px-4 py-2">Book an Appointment</a>
+      </div>
+
+      <!-- Image Right -->
+      <div class="col-lg-6 text-center">
+        <img src="images/reception.jpg" class="img-fluid rounded shadow h-100" style="object-fit: cover;" alt="St. August Hospital Reception">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= TRUST STATS ================= -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Why Choose Us</h2>
+    <div class="row text-center g-4">
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <i class="fa-solid fa-ambulance fa-2x text-danger mb-2"></i>
+          <h2 class="fw-bold text-primary">24/7</h2>
+          <p class="mb-0">Emergency Care</p>
+          <a href="#appointments" class="btn btn-sm btn-primary mt-2">Book Now</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <i class="fa-solid fa-user-doctor fa-2x text-success mb-2"></i>
+          <h2 class="fw-bold text-success">15+</h2>
+          <p class="mb-0">Doctors & Nurses</p>
+          <a href="#appointments" class="btn btn-sm btn-success mt-2">Consult Now</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <i class="fa-solid fa-hospital-user fa-2x text-warning mb-2"></i>
+          <h2 class="fw-bold text-warning">5K+</h2>
+          <p class="mb-0">Patients Served</p>
+          <a href="#appointments" class="btn btn-sm btn-warning mt-2">Join Us</a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <i class="fa-solid fa-heart fa-2x text-danger mb-2"></i>
+          <h2 class="fw-bold text-danger">100%</h2>
+          <p class="mb-0">Care & Compassion</p>
+          <a href="#appointments" class="btn btn-sm btn-danger mt-2">Experience Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+<section class="py-5" id="services">
+  <div class="container">
+    <h2 class="section-title text-center">Our Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <img src="images/beds.jpg" class="card-img-top" alt="Inpatient Care">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-bed-pulse fa-2x text-success mb-2"></i>
+            <h5>Inpatient & Outpatient Care</h5>
+            <p>Private and general wards with round-the-clock nursing and doctor care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <img src="images/delivery room.jpg" class="card-img-top" alt="Maternity Services">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-baby fa-2x text-success mb-2"></i>
+            <h5>Maternity & Obstetrics</h5>
+            <p>Comprehensive maternity care and delivery services for mothers and newborns.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card service-card h-100">
+          <img src="images/pharmacy2.jpg" class="card-img-top" alt="Pharmacy & Lab">
+          <div class="card-body text-center">
+            <i class="fa-solid fa-pills fa-2x text-success mb-2"></i>
+            <h5>Pharmacy & Laboratory</h5>
+            <p>Fully stocked pharmacy and reliable laboratory diagnostic services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FACILITIES ================= -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="section-title text-center">Our Facilities</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><img src="images/wards.jpg" class="img-fluid rounded shadow" alt="Wards"></div>
+      <div class="col-md-4"><img src="images/delivery room.jpg" class="img-fluid rounded shadow" alt="Delivery Room"></div>
+      <div class="col-md-4"><img src="images/dental.jpg" class="img-fluid rounded shadow" alt="Parking"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="py-5" id="whychooseus" style="background: linear-gradient(135deg, #e3f7e1 0%, #f0f8ff 100%);">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" style="font-weight: 900; font-size: 2.8rem; color: #0d6efd; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+      Why Choose <span style="color: #20c997;">Us</span>
+    </h2>
+    <div class="row g-4">
+
+      <!-- Qualified Doctors -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm h-100 p-4 hover-scale">
+          <div class="icon bg-success text-white rounded-circle mx-auto mb-3" style="width:70px; height:70px; display:flex; align-items:center; justify-content:center; font-size:28px;">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Qualified Doctors</h5>
+          <p>Experienced medical professionals providing exceptional patient care, always putting your health first.</p>
+        </div>
+      </div>
+
+      <!-- Modern Facilities -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm h-100 p-4 hover-scale">
+          <div class="icon bg-success text-white rounded-circle mx-auto mb-3" style="width:70px; height:70px; display:flex; align-items:center; justify-content:center; font-size:28px;">
+            <i class="fa-solid fa-hospital"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Modern Facilities</h5>
+          <p>Equipped with the latest medical equipment for accurate diagnosis, advanced treatment, and patient comfort.</p>
+        </div>
+      </div>
+
+      <!-- Ample Parking -->
+      <div class="col-md-4">
+        <div class="card text-center border-0 shadow-sm h-100 p-4 hover-scale">
+          <div class="icon bg-success text-white rounded-circle mx-auto mb-3" style="width:70px; height:70px; display:flex; align-items:center; justify-content:center; font-size:28px;">
+            <i class="fa-solid fa-square-parking"></i>
+          </div>
+          <h5 class="fw-bold mb-2">Ample & Secure Parking</h5>
+          <p>Spacious and secure parking ensures convenience, easy access, and peace of mind for all visitors.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-5">
+      <a href="#appointments" class="btn btn-primary btn-lg px-5 py-2 shadow-lg">Book Your Appointment</a>
+    </div>
+  </div>
+
+  <style>
+    .hover-scale:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+  </style>
+</section>
+
+
+<!-- ================= CTA ================= -->
+<section class="cta text-center">
+  <div class="container">
+    <h2>Your Health Is Our Priority</h2>
+    <p>Book your appointment today</p>
+    <a href="#appointments" class="btn btn-light btn-lg">Get Started</a>
+  </div>
+</section>
+
+<!-- ================= APPOINTMENTS ================= -->
+<section class="py-5 bg-light" id="appointments">
+  <div class="container">
+    <h2 class="section-title text-center">Book an Appointment</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form id="appointmentForm" class="bg-white shadow p-4 rounded">
+          <input id="fullName" class="form-control mb-3" placeholder="Full Name" required>
+          <input id="email" class="form-control mb-3" type="email" placeholder="Email Address" required>
+          <input id="phone" class="form-control mb-3" placeholder="Phone Number" required>
+          <select id="service" class="form-select mb-3" required>
+            <option disabled selected>Select Service</option>
+            <option>Consultation</option>
+            <option>Dental</option>
+            <option>Inpatient</option>
+            <option>Maternity</option>
+          </select>
+          <input id="date" type="date" class="form-control mb-3" required>
+          <button type="button" class="btn btn-success w-100" onclick="sendWhatsApp()">Submit Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function sendWhatsApp() {
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+  const date = document.getElementById('date').value;
+
+  if (!fullName || !email || !phone || !service || !date) {
+    alert("Please fill all fields!");
+    return;
+  }
+
+  const message = `Hello St. August Hospital,%0A%0AMy name is ${fullName}.%0AEmail: ${email}%0APhone: ${phone}%0AService: ${service}%0ADate: ${date}%0A%0APlease confirm my appointment.`;
+  const waNumber = "254769069686"; // your WhatsApp number
+  const waLink = `https://wa.me/${waNumber}?text=${message}`;
+
+  window.open(waLink, '_blank');
+}
+</script>
+
+
+<!-- ================= CONTACT ================= -->
+<section class="py-5" id="contact" style="background: #f8f9fa;">
+  <div class="container">
+    <h2 class="section-title text-center mb-5" style="color: #0a2e5c; font-weight: 800;">Contact Us</h2>
+    <div class="row g-4 align-items-start">
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <h5 class="fw-bold mb-3">Get in Touch</h5>
+          <p class="mb-3"><i class="fa-solid fa-location-dot text-success me-2"></i>Syokimau, Machakos County</p>
+          <p class="mb-3"><i class="fa-solid fa-phone text-success me-2"></i>+254 769 069 686</p>
+          <p class="mb-3"><i class="fa-solid fa-envelope text-success me-2"></i>info@staugusthospital.co.ke</p>
+          <p class="mb-0">We are always here to help and answer your questions. Reach out to us and we’ll respond as soon as we can.</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="card shadow-sm border-0 p-4 h-100">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Full Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-bold">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Type your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100 fw-bold">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Google Map -->
+    <div class="mt-5">
+      <h5 class="fw-bold text-center mb-3">Our Location</h5>
+      <div class="map-responsive rounded shadow">
+  <iframe 
+    src="https://www.google.com/maps?q=Syokimau+Machakos+County+along+Katani+Road+near+360+Degrees+Court+Apartment+Phase+1&output=embed" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<<footer class="py-4 text-center bg-dark text-white">
+  <p class="mb-0">
+    &copy; <span id="currentYear"></span> St. August Hospital. All Rights Reserved. 
+    Developed by <a href="https://dantechdevs.github.io" target="_blank" class="text-success text-decoration-none">DantechDevelopers</a>.
+  </p>
+</footer>
+
+<script>
+  // Automatically update the year
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/254769069686" class="whatsapp-float"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="tel:+254769069686" class="call-float"><i class="fa-solid fa-phone"></i></a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
