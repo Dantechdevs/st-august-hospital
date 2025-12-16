@@ -12,6 +12,7 @@
   - [Features](#features)
   - [Technologies Used](#technologies-used)
   - [Pages](#pages)
+  - [](#)
   - [Installation \& Usage](#installation--usage)
 
 ---
@@ -65,7 +66,10 @@ All content is currently contained in a **single-page layout** with internal nav
 - **Contact**  
 
 > Each section is linked via the navbar and top bar buttons for easy scrolling.  
-
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
 ---
 
 ## Installation & Usage
